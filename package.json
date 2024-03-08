@@ -1,0 +1,34 @@
+{
+  "name": "todo-app-ck",
+  "version": "1.0.0",
+  "description": "book store app in react and nodejs",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node   backend/index.js",
+    "dev": "nodemon backend/index.js",
+    "production": "cd frontend && npm run build",
+    "build": "cd frontend && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Isahck000/todo-app-ck.git"
+  },
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "mongodb"
+  ],
+  "author": "isah abdulhameed haruna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Isahck000/todo-app-ck/issues"
+  },
+  "homepage": "https://github.com/Isahck000/todo-app-ck#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.4",
+    "express": "^4.18.2",
+    "mongoose": "^8.1.3"
+  }
+}
