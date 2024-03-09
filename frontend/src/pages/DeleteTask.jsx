@@ -7,12 +7,13 @@ const DeleteTask = () => {
 
   const deleteTodo = async () => {
    try {
-       const deta = await fetch(`http://localhost:3333/todo/${id}`, {
+       const deta = await fetch(`/api/todo/${id}`, {
         method: "DELETE",
       });
       if(deta){ navigate('/view') }
         
     } catch (error) {
+      toast.error("failed to delete data")
       console.log("erro");
     }
   };

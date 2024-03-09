@@ -18,7 +18,7 @@ const Home = () => {
     }
     setLoading(true);
     try {
-      await fetch("http://localhost:3333/todo", {
+      await fetch("/api/todo", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),

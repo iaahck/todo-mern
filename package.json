@@ -1,18 +1,19 @@
 {
-  "name": "todo-app-ck",
+  "name": "ck-todo-app",
   "version": "1.0.0",
-  "description": "book store app in react and nodejs",
+  "description": "todo app in react and nodejs",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node   backend/index.js",
+    "start": "node backend/index.js",
     "dev": "nodemon backend/index.js",
     "production": "cd frontend && npm run build",
-    "build": "cd frontend && npm install && npm run build"
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
+    "clone": "npm install && cd frontend && npm install --legacy--peer-deps"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Isahck000/todo-app-ck.git"
+    "url": "git+https://github.com/Isahck000/ck-todo-app.git"
   },
   "keywords": [
     "javascript",
@@ -22,9 +23,9 @@
   "author": "isah abdulhameed haruna",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Isahck000/todo-app-ck/issues"
+    "url": "https://github.com/Isahck000/ck-todo-app/issues"
   },
-  "homepage": "https://github.com/Isahck000/todo-app-ck#readme",
+  "homepage": "https://github.com/Isahck000/ck-todo-app#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.4",

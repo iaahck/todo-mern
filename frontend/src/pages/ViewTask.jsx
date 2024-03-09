@@ -12,14 +12,14 @@ const ViewTask = () => {
   const getTodo = async () => {
       setLoading(true)
     try{
-      const getAll = await fetch('http://localhost:3333/todo');
+      const getAll = await fetch('/api/todo');
     const data = await getAll.json()
     setTodo(data.data)
-    // console.table(data)
     setLoading(false)
     }
     catch(error){
       setLoading(false)
+      toast.error("failed to get data try again")
     }
   }
 

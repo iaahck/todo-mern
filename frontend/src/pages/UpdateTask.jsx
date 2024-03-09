@@ -15,15 +15,15 @@ const UpdateTask = () => {
   const getTodo = async () => {
     setLoading(true)
     try {
-      const getAll = await fetch(`http://localhost:3333/todo/${id}`);
+      const getAll = await fetch(`/api/todo/${id}`);
       const data = await getAll.json()
       setTitle(data.title)
       setTime(data.time)
-      console.table(data)
       setLoading(false)
     }
     catch (error) {
       setLoading(false)
+      toast.error("failed to get data")
     }
   }
 
@@ -34,10 +34,10 @@ const UpdateTask = () => {
   const SendData = async (e) => {
     e.preventDefault();
     const data = { title, time };
-    console.log(data)
+    //console.log(data)
     setLoading(true);
     try {
-      await fetch(`http://localhost:3333/todo/${id}`, {
+      await fetch(`/api/todo/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -46,7 +46,7 @@ const UpdateTask = () => {
       setLoading(false);
       navigate("/");
     } catch (error) {
-      toast.error(error);
+      toast.error("erro with updating");
       setLoading(false);
     }
   };
